@@ -11,6 +11,10 @@ inputs:
     description: "What's your token?"
     required: true
     default: ""
+  access_token:
+    description: "What's your access_token?"
+    required: true
+    default: ""
 
 runs:
   using: "docker"
