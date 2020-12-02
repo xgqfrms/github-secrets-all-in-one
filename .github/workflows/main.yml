@@ -35,7 +35,6 @@ jobs:
         env: 
           # Or as an environment variable
           access_token: ${{ secrets.ACCESS_TOKEN }}
-          TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
       # uses 和 with 搭配使用 
 
