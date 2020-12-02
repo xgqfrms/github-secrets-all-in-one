@@ -1,0 +1,21 @@
+name: "Github Actions with env"
+description: "Github Action description"
+author: "xgqfrms@xgqfrms.xyz"
+
+inputs:
+  MY_NAME:
+    description: "Who Are you?"
+    required: true
+    default: "webgeeker"
+  TOKEN:
+    description: "What's your token?"
+    required: true
+    default: ""
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "green"
