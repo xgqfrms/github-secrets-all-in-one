@@ -30,13 +30,14 @@ jobs:
         with:
           MY_NAME: "xgqfrms"
           TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # with, Set the secret as an input
+          access_token: ${{ secrets.ACCESS_TOKEN }}
+        env: 
+          # Or as an environment variable
+          access_token: ${{ secrets.ACCESS_TOKEN }}
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
-      # with & env
-      - name: access_token action
-        with: # Set the secret as an input
-          access_token: ${{ secrets.ACCESS_TOKEN }}
-        env: # Or as an environment variable
-          access_token: ${{ secrets.ACCESS_TOKEN }}
+      # uses 和 with 搭配使用 
 
       # 使用 runners shell 运行单个命令 
       - name: Run a one-line script ✅ 👨🏻‍💻
