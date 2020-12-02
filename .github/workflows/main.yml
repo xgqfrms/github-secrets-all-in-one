@@ -29,7 +29,7 @@ jobs:
       - uses: ./actions
         with:
           MY_NAME: "xgqfrms"
-          TOKEN: "$ACCESS_TOKEN"
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
       # with & env
       - name: access_token action
@@ -40,7 +40,14 @@ jobs:
 
       # 使用 runners shell 运行单个命令 
       - name: Run a one-line script ✅ 👨🏻‍💻
-        run: echo 正在执行单个命令! 
+        run: echo 正在执行单个命令!
+         
+      # 使用 runners shell 打印环境变量 env
+      - name: print env input
+        run: |
+          echo 正在执行单个命令! 
+          echo 打印 ACCESS_TOKEN "$ACCESS_TOKEN"
+          echo 打印 secrets.ACCESS_TOKEN "$secrets.ACCESS_TOKEN"
 
       # 使用 runners shell 运行一组命令
       - name: Run a multi-line script ✅ 👨🏻‍💻
